@@ -28,8 +28,8 @@ return {
         --   completeopt = "menu,menuone,noinsert" .. (auto_select and "" or ",noselect"),
         -- },
         completion = {
-          -- autocomplete = false, -- Disables automatic completion
-          completeopt = "menu,menuone,noinsert" .. (auto_select and "" or ",noselect"),
+          autocomplete = false, -- Disables automatic completion
+          -- completeopt = "menu,menuone,noinsert" .. (auto_select and "" or ",noselect"),
         },
         preselect = auto_select and cmp.PreselectMode.Item or cmp.PreselectMode.None,
         mapping = cmp.mapping.preset.insert({
