@@ -15,6 +15,7 @@ return {
       ["<C-x>"] = "actions.select_split", -- Horizontal split
       ["<C-t>"] = "actions.select_tab", -- Open in new tab
       ["q"] = "actions.close", -- Close Oil
+      ["<BS>"] = { "actions.parent", mode = "n" },
     },
   },
   -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- Optional: Adds icons
