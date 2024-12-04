@@ -9,3 +9,5 @@ vim.api.nvim_create_autocmd("FileType", {
     opt.preserveindent = false
   end,
 })
+
+vim.opt.pumblend = 0

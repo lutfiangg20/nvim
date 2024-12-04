@@ -24,13 +24,13 @@ return {
       local auto_select = true
       return {
         auto_brackets = {}, -- configure any filetype to auto add brackets
-        -- completion = {
-        --   completeopt = "menu,menuone,noinsert" .. (auto_select and "" or ",noselect"),
-        -- },
         completion = {
-          autocomplete = false, -- Disables automatic completion
-          -- completeopt = "menu,menuone,noinsert" .. (auto_select and "" or ",noselect"),
+          completeopt = "menu,menuone,noinsert" .. (auto_select and "" or ",noselect"),
         },
+        -- completion = {
+        --   autocomplete = false, -- Disables automatic completion
+        --   -- completeopt = "menu,menuone,noinsert" .. (auto_select and "" or ",noselect"),
+        -- },
         preselect = auto_select and cmp.PreselectMode.Item or cmp.PreselectMode.None,
         mapping = cmp.mapping.preset.insert({
           ["<C-b>"] = cmp.mapping.scroll_docs(-4),
