@@ -8,7 +8,7 @@ return {
     win_options = {
       signcolumn = "yes:2",
     },
-    columns = { "icon", "git_status" },
+    columns = { "icon", "git_status", "size" },
     keymaps = {
       ["<CR>"] = "actions.select", -- Open file or enter directory
       ["<C-v>"] = "actions.select_vsplit", -- Vertical split
@@ -17,7 +17,8 @@ return {
       ["q"] = "actions.close", -- Close Oil
       ["<BS>"] = { "actions.parent", mode = "n" },
     },
+    skip_confirm_for_simple_edits = true,
   },
-  -- dependencies = { "nvim-tree/nvim-web-devicons" }, -- Optional: Adds icons
-  dependencies = { { "echasnovski/mini.icons", opts = {} } }, -- Optional: Adds icons
+  dependencies = { "nvim-tree/nvim-web-devicons" }, -- Optional: Adds icons
+  -- dependencies = { { "echasnovski/mini.icons", opts = {} } }, -- Optional: Adds icons
 }
