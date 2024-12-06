@@ -51,3 +51,9 @@ require("lazy").setup({
     },
   },
 })
+
+-- Increase the scroll speed for <C-e> (down)
+vim.keymap.set("n", "<C-e>", "5<C-e>", { noremap = true, silent = true })
+
+-- Increase the scroll speed for <C-y> (up)
+vim.keymap.set("n", "<C-y>", "5<C-y>", { noremap = true, silent = true })
