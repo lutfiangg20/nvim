@@ -4,3 +4,5 @@
 
 -- Set keybinding for Oil.nvim here
 vim.keymap.set("n", "<leader>e", ":Oil<CR>", { desc = "Open Oil file explorer" })
+
+-- vim.keymap.set("n", "<leader>e", ":Explore<CR>", { desc = "Open netrw file explorer" })

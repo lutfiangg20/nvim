@@ -5,6 +5,9 @@ vim.opt.shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Comman
 vim.opt.shellquote = ""
 vim.opt.shellxquote = ""
 
+-- read folder insinde ()
+vim.opt.isfname:append({ "(", ")" })
+
 require("luasnip.loaders.from_vscode").lazy_load({ path = "C:/Users/acer/AppData/Local/nvim/lua/snippets" }) -- Load snippets in VSCode format
 
 -- Enable line wrapping with proper configurations

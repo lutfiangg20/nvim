@@ -85,4 +85,8 @@ return {
     end,
     main = "lazyvim.util.cmp",
   },
+  require("lspconfig").intelephense.setup({
+    capabilities = capabilities,
+    filetypes = { "php", "blade" },
+  }),
 }
