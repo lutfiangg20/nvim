@@ -5,17 +5,33 @@ return {
     version = "*",
     config = function()
       require("toggleterm").setup({
-        shell = "pwsh.exe",
+        shell = "/usr/bin/zsh",
         size = 15,
         open_mapping = [[<C-\>]],
-        direction = "horizontal",
+        direction = "float",
         float_opts = {
           border = "curved", -- Choose the border type for float terminal
-          width = 100,
-          height = 10,
+          width = 600,
+          height = 600,
           winblend = 3,
         },
       })
+      -- Kiro CLI TUI terminal
+      local Terminal = require("toggleterm.terminal").Terminal
+      local kiro = Terminal:new({
+        cmd = "kiro-cli --tui",
+        direction = "float",
+        hidden = true,
+        float_opts = {
+          border = "curved",
+          width = math.floor(vim.o.columns * 0.9),
+          height = math.floor(vim.o.lines * 0.9),
+        },
+      })
+      vim.keymap.set("n", "<leader>tk", function()
+        kiro:toggle()
+      end, { desc = "Kiro TUI" })
+
       -- Key mappings for toggling terminal splits
       local function set_terminal_keymaps()
         local opts = { noremap = true }

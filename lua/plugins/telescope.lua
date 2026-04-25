@@ -1,9 +1,15 @@
 return {
-  require("telescope").setup({
+  "nvim-telescope/telescope.nvim",
+  dependencies = { "nvim-lua/plenary.nvim" },
+  cmd = "Telescope",
+  opts = {
     defaults = {
       file_ignore_patterns = {
-        "node_modules",
+        "node_modules/.*",
+        "dist",
+        "build",
+        ".git/",
       },
     },
-  }),
+  },
 }
